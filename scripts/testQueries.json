@@ -1,522 +1,522 @@
 [
   {
     "query": "when did we decide on the vacation destination",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04a9",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fc9a",
     "hardCase": true,
     "targetId": "hard-1",
     "isDecisionThread": true,
-    "decisionName": "Summer Vacation Destination Decision",
+    "decisionName": null,
     "messagePreview": {
-      "sender": "Priya",
-      "text": "chalo Manali holiday final lock ho gaya, train booking window opens tonight",
-      "timestamp": "2026-03-01T07:11:20.000Z"
+      "sender": "Sneha",
+      "text": "Final call: Himachal. Let’s stop debating and start looking at stays.",
+      "timestamp": "2026-03-01T11:33:58.000Z"
     }
   },
   {
-    "query": "which eatery was chosen for our weekend meetup",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04b8",
+    "query": "which dining spot did everyone choose regarding Saturday night",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fcdd",
     "hardCase": true,
     "targetId": "hard-2",
     "isDecisionThread": true,
-    "decisionName": "Weekend Dinner Venue Decision",
+    "decisionName": null,
     "messagePreview": {
-      "sender": "Kabir",
-      "text": "Saturday 8 baje Toit chalte hai, table reserve ho gayi",
-      "timestamp": "2026-03-01T11:22:50.000Z"
+      "sender": "Sneha",
+      "text": "Final call: the North Indian place. I'll make the reservation for eight.",
+      "timestamp": "2026-03-23T13:41:38.981Z"
     }
   },
   {
-    "query": "what is the official cutoff time for project deliverables",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04c7",
+    "query": "how much cash should all attendees contribute toward Sneha surprise celebration",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd18",
     "hardCase": true,
     "targetId": "hard-3",
-    "isDecisionThread": true,
-    "decisionName": "Hackathon Submission Deadline Decision",
+    "isDecisionThread": false,
+    "decisionName": null,
     "messagePreview": {
-      "sender": "Rohan",
-      "text": "final pitch deck kal dopehar 2 baje se pehle submit karna hai",
-      "timestamp": "2026-03-01T15:41:32.000Z"
+      "sender": "Priya",
+      "text": "Guys, the gift is ₹4,000 total. Eight people means ₹500 each.",
+      "timestamp": "2026-04-17T22:54:49.969Z"
     }
   },
   {
-    "query": "how much cash should each participant contribute for the group gift",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04cd",
+    "query": "what time and location was fixed for tomorrow jogging meetup",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd87",
     "hardCase": true,
     "targetId": "hard-4",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Neha",
-      "text": "per head 500 rupay gpay kardo Neha ko, boquet aur cake ka total utna hi hai",
-      "timestamp": "2026-03-01T18:45:48.000Z"
+      "sender": "Sneha",
+      "text": "Done. Park entrance, 6 AM. No excuses.",
+      "timestamp": "2026-05-30T10:58:59.994Z"
     }
   },
   {
-    "query": "which specific laptop brand encountered an overheating problem",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04d1",
+    "query": "where could Aarav misplaced entry keys possibly be located",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fdb7",
     "hardCase": true,
     "targetId": "hard-5",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Aarav",
-      "text": "mera Dell bohot zyada garam ho raha hai fan continuously full speed pe chalra",
-      "timestamp": "2026-03-01T20:48:34.000Z"
+      "sender": "Sneha",
+      "text": "Check with the building security first. Someone might have handed them in.",
+      "timestamp": "2026-06-19T13:20:08.446Z"
     }
   },
   {
-    "query": "who volunteered to collect everyone from the railway terminal",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04d7",
+    "query": "when does coursework upload window close",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fde5",
     "hardCase": true,
     "targetId": "hard-6",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Vikram",
-      "text": "sabko station se pick mai kar lunga gaadi leke aaunga",
-      "timestamp": "2026-03-01T23:55:03.000Z"
+      "sender": "Kabir",
+      "text": "Just checked the notice. The cutoff is 5 PM tomorrow.",
+      "timestamp": "2026-07-09T14:14:48.186Z"
     }
   },
   {
-    "query": "what medical condition forced the cancellation of morning badminton",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04dc",
+    "query": "which transit method got approved for our outward journey",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fca2",
     "hardCase": true,
     "targetId": "hard-7",
-    "isDecisionThread": false,
+    "isDecisionThread": true,
     "decisionName": null,
     "messagePreview": {
       "sender": "Sneha",
-      "text": "pair me severe sprain aa gaya doctor ne bed rest bola hai aaj khelne nahi aa paunga",
-      "timestamp": "2026-03-02T03:59:46.000Z"
+      "text": "Done. I'll check the train tickets tonight.",
+      "timestamp": "2026-03-01T16:23:07.676Z"
     }
   },
   {
-    "query": "where were the spare apartment keys left behind",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04e2",
+    "query": "what accommodation sleeping arrangement was agreed upon",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fcb2",
     "hardCase": true,
     "targetId": "hard-8",
-    "isDecisionThread": false,
+    "isDecisionThread": true,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Ananya",
-      "text": "flat ki doosri chaabi security guard ke paas drop kardi thi maine",
-      "timestamp": "2026-03-02T08:04:47.000Z"
+      "sender": "Sneha",
+      "text": "😂 Two rooms it is. I'm not waking up to someone's alarm at 5 AM again.",
+      "timestamp": "2026-03-08T12:18:08.859Z"
     }
   },
   {
-    "query": "what did Priya say about hotel prices for Goa",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04e6",
+    "query": "what document did Priya have after losing her wallet",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fcba",
     "hardCase": false,
     "targetId": "norm-1",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
       "sender": "Priya",
-      "text": "Maine Goa trip ke hotels shortlist kar liye hain, 4k per night hai",
-      "timestamp": "2026-03-02T10:07:49.000Z"
+      "text": "I have my passport, thankfully.",
+      "timestamp": "2026-03-08T16:55:51.147Z"
     }
   },
   {
-    "query": "what did Aarav say about the trip budget",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04eb",
+    "query": "why did Aarav suggest renting a car only for the day trip",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fcc2",
     "hardCase": false,
     "targetId": "norm-2",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
       "sender": "Aarav",
-      "text": "Overall budget per person 15000 se zyada nahi hona chahiye guys",
-      "timestamp": "2026-03-02T12:11:10.000Z"
+      "text": "We could use cabs for the city and rent a car only for the day trip.",
+      "timestamp": "2026-03-13T13:23:37.346Z"
     }
   },
   {
-    "query": "what did Rohan say about MongoDB vector search",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04ef",
+    "query": "who owed everyone chai for leaving the air conditioner on",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fcd4",
     "hardCase": false,
     "targetId": "norm-3",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Rohan",
-      "text": "MongoDB Atlas vector search documentation check karo, cosine similarity use karni hai",
-      "timestamp": "2026-03-02T15:15:27.000Z"
+      "sender": "Aarav",
+      "text": "Whoever did it owes us chai.",
+      "timestamp": "2026-03-17T21:06:46.493Z"
     }
   },
   {
-    "query": "which ramen restaurant did Ananya recommend in Indiranagar",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04f3",
+    "query": "what did Rohan order at the new restaurant that he found overhyped",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fce3",
     "hardCase": false,
     "targetId": "norm-4",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Ananya",
-      "text": "Indiranagar me naya ramen place khula hai, review 4.8 hai chalte hai",
-      "timestamp": "2026-03-02T17:18:35.000Z"
+      "sender": "Rohan",
+      "text": "Their signature pasta and dessert.",
+      "timestamp": "2026-03-29T18:44:18.495Z"
     }
   },
   {
-    "query": "why was Kabir running late at Silk Board",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04f7",
+    "query": "what wrong food item did Rohan receive instead of a burger",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fce8",
     "hardCase": false,
     "targetId": "norm-5",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Kabir",
-      "text": "Traffic at Silk Board is totally jammed, will reach 45 mins late",
-      "timestamp": "2026-03-02T19:22:03.000Z"
+      "sender": "Rohan",
+      "text": "Why did I get a paneer wrap? I asked for a burger 😭",
+      "timestamp": "2026-03-29T21:31:50.897Z"
     }
   },
   {
-    "query": "when is Neha semester final exam",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04fb",
+    "query": "who defended putting pineapple on pizza as sweet and salty",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fcf2",
     "hardCase": false,
     "targetId": "norm-6",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Neha",
-      "text": "Tomorrow is my semester final exam from 10 AM, switch off phone tonight",
-      "timestamp": "2026-03-02T21:26:12.000Z"
+      "sender": "Ananya",
+      "text": "Same. Sweet and salty works.",
+      "timestamp": "2026-04-04T19:14:17.630Z"
     }
   },
   {
-    "query": "where did Vikram complete his 10k morning run",
-    "correctMessageId": "6aa57c1d5c5d8c55231b04ff",
+    "query": "what dish did Aarav offer to prepare for the Sunday potluck",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fcf8",
     "hardCase": false,
     "targetId": "norm-7",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Vikram",
-      "text": "Completed 10k morning run in Cubbon Park, feeling energetic",
-      "timestamp": "2026-03-02T23:30:22.000Z"
+      "sender": "Aarav",
+      "text": "I'm in. I'll make pulao.",
+      "timestamp": "2026-04-08T16:16:57.109Z"
     }
   },
   {
-    "query": "what did Sneha say about Inception IMAX movie tickets",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0503",
+    "query": "why was Rohan late to dinner table",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd02",
     "hardCase": false,
     "targetId": "norm-8",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Sneha",
-      "text": "Inception re-release IMAX tickets are open for Sunday 4 PM show",
-      "timestamp": "2026-03-03T02:34:06.000Z"
+      "sender": "Rohan",
+      "text": "I'm sorry 😭 Traffic is horrible. Give me fifteen minutes.",
+      "timestamp": "2026-04-08T18:40:32.286Z"
     }
   },
   {
-    "query": "who left a black thermos bottle in Kabir car",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0507",
+    "query": "which coffee shop did Priya recommend for the best filter coffee",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd08",
     "hardCase": false,
     "targetId": "norm-9",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Aarav",
-      "text": "Left my black thermos water bottle in Kabir car after the movie",
-      "timestamp": "2026-03-03T06:37:34.000Z"
+      "sender": "Priya",
+      "text": "That old café near the market.",
+      "timestamp": "2026-04-13T15:47:07.385Z"
     }
   },
   {
-    "query": "where did Priya buy trekking shoes on discount",
-    "correctMessageId": "6aa57c1d5c5d8c55231b050b",
+    "query": "what food delivery item was missing from Kabir order",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd12",
     "hardCase": false,
     "targetId": "norm-10",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Priya",
-      "text": "Bought mountain trekking shoes from Decathlon with 30% discount",
-      "timestamp": "2026-03-03T10:40:06.000Z"
+      "sender": "Kabir",
+      "text": "I ordered noodles. There's no noodles.",
+      "timestamp": "2026-04-17T18:54:10.080Z"
     }
   },
   {
-    "query": "which code editor did Rohan switch to",
-    "correctMessageId": "6aa57c1d5c5d8c55231b050f",
+    "query": "how much money did Aarav owe Kabir after the weekend trip",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd24",
     "hardCase": false,
     "targetId": "norm-11",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Rohan",
-      "text": "Switched from VS Code to Cursor for AI auto-complete, productivity doubled",
-      "timestamp": "2026-03-03T14:43:01.000Z"
+      "sender": "Kabir",
+      "text": "Just did. Aarav owes me ₹620, Neha ₹380, and Vikram ₹510.",
+      "timestamp": "2026-04-21T14:32:55.012Z"
     }
   },
   {
-    "query": "what is Ananya baking for Sneha birthday",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0513",
+    "query": "how much money did Rohan owe Ananya for food from three weeks ago",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd2a",
     "hardCase": false,
     "targetId": "norm-12",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
       "sender": "Ananya",
-      "text": "Baking blueberry cheesecake for Sneha birthday this Saturday",
-      "timestamp": "2026-03-03T17:46:38.000Z"
+      "text": "You still owe ₹240 😂",
+      "timestamp": "2026-04-26T17:03:06.777Z"
     }
   },
   {
-    "query": "where did Kabir lose his wireless earbuds",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0516",
+    "query": "how much is the shared streaming subscription per person",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd35",
     "hardCase": false,
     "targetId": "norm-13",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Kabir",
-      "text": "Lost my wireless earbuds at the gym, please check if anyone took by mistake",
-      "timestamp": "2026-03-03T19:48:49.000Z"
+      "sender": "Vikram",
+      "text": "Around ₹150 if we split it properly.",
+      "timestamp": "2026-04-26T20:34:23.822Z"
     }
   },
   {
-    "query": "what good news did Neha share about her internship",
-    "correctMessageId": "6aa57c1d5c5d8c55231b051a",
+    "query": "how much money did Kabir remind Rohan about borrowing",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd40",
     "hardCase": false,
     "targetId": "norm-14",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Neha",
-      "text": "Selected for summer software internship at Bangalore tech startup",
-      "timestamp": "2026-03-03T22:52:23.000Z"
+      "sender": "Kabir",
+      "text": "Rohan, tiny reminder about the ₹500 I lent you last week.",
+      "timestamp": "2026-05-07T12:35:12.345Z"
     }
   },
   {
-    "query": "who is hosting cricket match screening on their terrace",
-    "correctMessageId": "6aa57c1d5c5d8c55231b051f",
+    "query": "why did Aarav code fail two hours before the demo",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd4c",
     "hardCase": false,
     "targetId": "norm-15",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
       "sender": "Vikram",
-      "text": "Cricket match screening is arranged at my terrace with projector this Friday",
-      "timestamp": "2026-03-04T00:56:06.000Z"
+      "text": "It's failing because of that variable you renamed.",
+      "timestamp": "2026-05-07T15:42:16.384Z"
     }
   },
   {
-    "query": "who shared their Spotify playlist with 45000 minutes",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0523",
+    "query": "which code editor did Kabir recommend for Java",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd50",
     "hardCase": false,
     "targetId": "norm-16",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Sneha",
-      "text": "Spotify wrapped playlist link shared, listened to 45000 minutes this year",
-      "timestamp": "2026-03-04T03:00:01.000Z"
+      "sender": "Kabir",
+      "text": "For Java? IntelliJ.",
+      "timestamp": "2026-05-12T15:56:05.832Z"
     }
   },
   {
-    "query": "why was Aarav internet down due to fiber cut",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0527",
+    "query": "what did the team decide in the two hour corporate meeting",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd5e",
     "hardCase": false,
     "targetId": "norm-17",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Aarav",
-      "text": "WiFi router fiber cable was cut by BBMP road work, no internet today",
-      "timestamp": "2026-03-04T05:03:28.000Z"
+      "sender": "Priya",
+      "text": "That we'll discuss it tomorrow.",
+      "timestamp": "2026-05-16T13:44:59.779Z"
     }
   },
   {
-    "query": "what did Priya include in the packing list",
-    "correctMessageId": "6aa57c1d5c5d8c55231b052b",
+    "query": "what laptop hardware specifications did Vikram purchase",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd63",
     "hardCase": false,
     "targetId": "norm-18",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Priya",
-      "text": "Confirmed packing list: thermals, sunscreen, powerbank, and heavy jackets",
-      "timestamp": "2026-03-04T08:06:43.000Z"
+      "sender": "Vikram",
+      "text": "16 GB RAM, 1 TB SSD, decent processor.",
+      "timestamp": "2026-05-16T18:34:28.415Z"
     }
   },
   {
-    "query": "what is the latency of OpenAI embedding endpoint mentioned by Rohan",
-    "correctMessageId": "6aa57c1d5c5d8c55231b052f",
+    "query": "when does Ananya summer internship start",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd6d",
     "hardCase": false,
     "targetId": "norm-19",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Rohan",
-      "text": "OpenAI embedding endpoint response latency is around 250 milliseconds",
-      "timestamp": "2026-03-04T11:10:47.000Z"
+      "sender": "Ananya",
+      "text": "Next month.",
+      "timestamp": "2026-05-22T16:41:18.535Z"
     }
   },
   {
-    "query": "where did Ananya recommend having filter coffee in Malleshwaram",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0533",
+    "query": "what was the cause of Kabir late night programming error",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd75",
     "hardCase": false,
     "targetId": "norm-20",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Ananya",
-      "text": "Best filter coffee in Malleshwaram is at CTR, hands down",
-      "timestamp": "2026-03-04T15:15:07.000Z"
+      "sender": "Neha",
+      "text": "It's because you're passing a string where the function expects an integer.",
+      "timestamp": "2026-05-26T17:22:30.942Z"
     }
   },
   {
-    "query": "where did Kabir car tire get punctured",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0537",
+    "query": "what injury did Rohan suffer while jumping at the gym",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd88",
     "hardCase": false,
     "targetId": "norm-21",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Kabir",
-      "text": "Car tire got punctured near Koramangala Sony World signal, changing spare tire now",
-      "timestamp": "2026-03-04T17:18:23.000Z"
+      "sender": "Rohan",
+      "text": "Guys, I think I messed up my ankle at the gym.",
+      "timestamp": "2026-06-04T14:49:06.339Z"
     }
   },
   {
-    "query": "who borrowed Vikram camera tripod",
-    "correctMessageId": "6aa57c1d5c5d8c55231b053b",
+    "query": "how much does Kabir local gym membership cost per month",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd90",
     "hardCase": false,
     "targetId": "norm-22",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Neha",
-      "text": "Borrowing Vikram camera tripod for college presentation recording",
-      "timestamp": "2026-03-04T20:21:38.000Z"
+      "sender": "Kabir",
+      "text": "Is ₹2,000 a month for this gym actually worth it?",
+      "timestamp": "2026-06-04T19:10:11.823Z"
     }
   },
   {
-    "query": "what is the annual gym membership price mentioned by Vikram",
-    "correctMessageId": "6aa57c1d5c5d8c55231b053f",
+    "query": "what diet plan did Ananya start to avoid junk food",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fd9c",
     "hardCase": false,
     "targetId": "norm-23",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Vikram",
-      "text": "New gym membership offer is 12000 per year with free steam bath",
-      "timestamp": "2026-03-04T23:25:40.000Z"
+      "sender": "Ananya",
+      "text": "Less junk food and more home-cooked meals.",
+      "timestamp": "2026-06-09T13:40:38.169Z"
     }
   },
   {
-    "query": "what pet puppy did Sneha adopt and name Simba",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0543",
+    "query": "what turning point in the cricket match changed the game",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fda4",
     "hardCase": false,
     "targetId": "norm-24",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Sneha",
-      "text": "Adopted a 2-month-old golden retriever puppy, named him Simba",
-      "timestamp": "2026-03-05T01:28:57.000Z"
+      "sender": "Priya",
+      "text": "The turning point was definitely that catch.",
+      "timestamp": "2026-06-15T12:41:17.838Z"
     }
   },
   {
-    "query": "what did Aarav remind everyone regarding Splitwise balances",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0547",
+    "query": "why did Rohan miss the morning workout session",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fdad",
     "hardCase": false,
     "targetId": "norm-25",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Aarav",
-      "text": "Calculated splitwise dues, everyone please clear pending balances before month end",
-      "timestamp": "2026-03-05T03:33:31.000Z"
+      "sender": "Rohan",
+      "text": "Okay, my motivation didn't ring either.",
+      "timestamp": "2026-06-15T15:18:16.832Z"
     }
   },
   {
-    "query": "what time is Priya return flight on Monday morning",
-    "correctMessageId": "6aa57c1d5c5d8c55231b054b",
+    "query": "how far was the tire puncture repair shop from Rohan location",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fdbc",
     "hardCase": false,
     "targetId": "norm-26",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Priya",
-      "text": "Bought flight tickets for return journey on Monday morning 6 AM flight",
-      "timestamp": "2026-03-05T07:37:50.000Z"
+      "sender": "Rohan",
+      "text": "Google says there's one half a kilometre away.",
+      "timestamp": "2026-06-23T16:24:36.218Z"
     }
   },
   {
-    "query": "did Rohan complete pushing code to the GitHub repo",
-    "correctMessageId": "6aa57c1d5c5d8c55231b054f",
+    "query": "who had the spare key when Priya was locked out at midnight",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fdc4",
     "hardCase": false,
     "targetId": "norm-27",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Rohan",
-      "text": "GitHub repo push completed with clean commit history and documentation",
-      "timestamp": "2026-03-05T10:42:51.000Z"
+      "sender": "Priya",
+      "text": "Neha does, I think.",
+      "timestamp": "2026-06-23T19:50:40.698Z"
     }
   },
   {
-    "query": "which pizzeria did Ananya order 3 wood fired pizzas from",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0553",
+    "query": "what happened to Kabir laptop right before the presentation",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fdd0",
     "hardCase": false,
     "targetId": "norm-28",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Ananya",
-      "text": "Ordered 3 large wood fired pizzas from Brik Oven for all of us",
-      "timestamp": "2026-03-05T12:46:52.000Z"
+      "sender": "Kabir",
+      "text": "My laptop just froze five minutes before my presentation.",
+      "timestamp": "2026-07-03T13:02:32.978Z"
     }
   },
   {
-    "query": "which standup comic did Kabir watch live",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0557",
+    "query": "where did Neha remember leaving her wireless earbuds",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fdde",
     "hardCase": false,
     "targetId": "norm-29",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Kabir",
-      "text": "Watched standup comedy show by Zakir Khan live at Good Shepherd auditorium",
-      "timestamp": "2026-03-05T15:50:26.000Z"
+      "sender": "Neha",
+      "text": "Wait—I remember putting them there.",
+      "timestamp": "2026-07-03T16:57:21.947Z"
     }
   },
   {
-    "query": "what topic was Neha conference research paper on",
-    "correctMessageId": "6aa57c1d5c5d8c55231b055b",
+    "query": "what name did Sneha give to her newly adopted puppy",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fe1e",
     "hardCase": false,
     "targetId": "norm-30",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Neha",
-      "text": "Submitted research paper on distributed database consistency to IEEE conference",
-      "timestamp": "2026-03-05T19:53:39.000Z"
+      "sender": "Sneha",
+      "text": "Milo.",
+      "timestamp": "2026-08-01T15:42:12.101Z"
     }
   },
   {
-    "query": "which marathon race did Vikram register for",
-    "correctMessageId": "6aa57c1d5c5d8c55231b055f",
+    "query": "what date is Aarav moving to his new apartment",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fe28",
     "hardCase": false,
     "targetId": "norm-31",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Vikram",
-      "text": "Registration open for TCS World 10K marathon, registered under open category",
-      "timestamp": "2026-03-05T22:57:00.000Z"
+      "sender": "Aarav",
+      "text": "Probably around the 20th.",
+      "timestamp": "2026-08-01T19:29:58.970Z"
     }
   },
   {
-    "query": "what indoor plants did Sneha put on her balcony",
-    "correctMessageId": "6aa57c1d5c5d8c55231b0563",
+    "query": "what book did Ananya recommend for psychological mystery lovers",
+    "correctMessageId": "6aa58fd4a2bb5328b8c3fe5d",
     "hardCase": false,
     "targetId": "norm-32",
     "isDecisionThread": false,
     "decisionName": null,
     "messagePreview": {
-      "sender": "Sneha",
-      "text": "Planted 10 indoor money plants and succulents on my balcony",
-      "timestamp": "2026-03-06T02:00:30.000Z"
+      "sender": "Ananya",
+      "text": "The Silent Patient.",
+      "timestamp": "2026-08-23T10:42:45.467Z"
     }
   }
 ]

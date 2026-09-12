@@ -56,8 +56,7 @@ async function syncTestQueries(allInsertedMessages) {
     const matched = allInsertedMessages.find(
       (m) =>
         m.sender === target.sender &&
-        m.text === target.text &&
-        new Date(m.timestamp).getTime() === new Date(target.timestamp).getTime()
+        m.text.trim() === target.text.trim()
     );
 
     if (matched) {
