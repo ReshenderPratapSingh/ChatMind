@@ -1,189 +1,182 @@
 import { useState } from 'react';
+import axios from 'axios';
+import SearchBar from './components/SearchBar';
+import SearchResults from './components/SearchResults';
 
 function App() {
   const rawApiUrl = import.meta.env.VITE_API_URL || '';
   const apiUrl = rawApiUrl.replace(/\/+$/, '');
 
-  const [loadingType, setLoadingType] = useState(null); // 'health' | 'db' | null
-  const [activeEndpoint, setActiveEndpoint] = useState(null);
-  const [responseStatus, setResponseStatus] = useState(null);
-  const [responseData, setResponseData] = useState(null);
-  const [errorMessage, setErrorMessage] = useState(null);
-  const [responseTime, setResponseTime] = useState(null);
+  // Search state
+  const [isSearching, setIsSearching] = useState(false);
+  const [searchResults, setSearchResults] = useState([]);
+  const [activeQuery, setActiveQuery] = useState('');
+  const [searchLatency, setSearchLatency] = useState(null);
+  const [searchError, setSearchError] = useState(null);
+  const [hasSearched, setHasSearched] = useState(false);
 
-  const executeRequest = async (type, endpoint) => {
-    if (!apiUrl) {
-      setErrorMessage(
-        'VITE_API_URL is undefined. Please verify client/.env or your deployment environment variables.'
-      );
-      setResponseData(null);
-      setResponseStatus(null);
-      setActiveEndpoint(endpoint);
-      return;
-    }
+  // Connectivity test state (perserved from skeleton)
+  const [showTester, setShowTester] = useState(false);
+  const [testLoading, setTestLoading] = useState(null);
+  const [testOutput, setTestOutput] = useState(null);
+  const [testError, setTestError] = useState(null);
 
-    setLoadingType(type);
-    setActiveEndpoint(endpoint);
-    setErrorMessage(null);
-    setResponseData(null);
-    setResponseStatus(null);
-    setResponseTime(null);
+  const handleSearch = async (queryText) => {
+    if (!queryText.trim()) return;
+
+    setIsSearching(true);
+    setActiveQuery(queryText);
+    setSearchError(null);
+    setHasSearched(true);
 
     const startTime = performance.now();
-    const targetUrl = `${apiUrl}${endpoint}`;
+    const endpoint = `${apiUrl || 'http://localhost:5001'}/api/search`;
 
     try {
-      const res = await fetch(targetUrl);
+      const response = await axios.post(endpoint, {
+        query: queryText,
+        limit: 8,
+      });
+
       const elapsed = Math.round(performance.now() - startTime);
-      setResponseTime(elapsed);
-      setResponseStatus(res.status);
+      setSearchLatency(elapsed);
 
-      let data;
-      const contentType = res.headers.get('content-type');
-      if (contentType && contentType.includes('application/json')) {
-        data = await res.json();
+      if (response.data?.success) {
+        setSearchResults(response.data.data.results || []);
       } else {
-        const text = await res.text();
-        data = { rawText: text };
+        setSearchError(response.data?.error || 'Failed to fetch search results');
+        setSearchResults([]);
       }
-
-      if (!res.ok) {
-        setErrorMessage(
-          data?.message ||
-          data?.error ||
-          `Server returned HTTP ${res.status}: ${res.statusText || 'Error'}`
-        );
-      }
-      setResponseData(data);
     } catch (err) {
       const elapsed = Math.round(performance.now() - startTime);
-      setResponseTime(elapsed);
-      setResponseStatus(0);
-      setErrorMessage(
-        `Fetch Failed: ${err.message || 'Network error'}. Possible causes: backend is down, blocked by CORS, or invalid URL.`
-      );
-      setResponseData(null);
+      setSearchLatency(elapsed);
+      const msg =
+        err.response?.data?.error ||
+        err.response?.data?.message ||
+        err.message ||
+        'Network error contacting search API';
+      setSearchError(msg);
+      setSearchResults([]);
     } finally {
-      setLoadingType(null);
+      setIsSearching(false);
+    }
+  };
+
+  const handleRunTest = async (type, endpoint) => {
+    setTestLoading(type);
+    setTestError(null);
+    setTestOutput(null);
+
+    const targetUrl = `${apiUrl || 'http://localhost:5001'}${endpoint}`;
+    try {
+      const res = await axios.get(targetUrl);
+      setTestOutput(res.data);
+    } catch (err) {
+      setTestError(
+        err.response?.data?.error ||
+        err.response?.data?.message ||
+        err.message
+      );
+    } finally {
+      setTestLoading(null);
     }
   };
 
   return (
     <div className="container">
-      {/* Header */}
+      {/* App Header */}
       <header className="header">
-        <div className="header-badge">Deployment Validation Skeleton</div>
-        <h1 className="title">Full-Stack Connectivity Tester</h1>
+        <div className="header-badge">🧠 Semantic Group Chat Search</div>
+        <h1 className="title">ChatMind</h1>
         <p className="subtitle">
-          Verify end-to-end communication across Vercel (Frontend), Render (Backend), and MongoDB Atlas (Database).
+          Search WhatsApp archives by <strong>meaning and intent</strong>, not just keywords.
+          Find hidden decisions, venues, and plans even with zero word overlap.
         </p>
+
+        {/* Dataset Stats Pills */}
+        <div className="stats-row">
+          <span className="stat-pill">💬 4,991 Indexed Messages</span>
+          <span className="stat-pill">👥 8 Participants</span>
+          <span className="stat-pill">⚡ Atlas $vectorSearch (384-dim)</span>
+        </div>
       </header>
 
-      {/* Target API Banner */}
-      <section className="url-card">
-        <div className="url-label">
-          <span>Backend Target (VITE_API_URL):</span>
-        </div>
-        <code className="url-value" id="vite-api-url-display">
-          {apiUrl || '(not configured)'}
-        </code>
-      </section>
+      {/* Main Search Component */}
+      <SearchBar onSearch={handleSearch} isLoading={isSearching} />
 
-      {/* Action Buttons */}
-      <div className="actions-grid">
+      {/* Search Results Feed */}
+      <SearchResults
+        results={searchResults}
+        query={activeQuery}
+        latency={searchLatency}
+        hasSearched={hasSearched}
+        error={searchError}
+      />
+
+      {/* Developer & Connectivity Diagnostics Drawer */}
+      <section className="diagnostics-section">
         <button
-          id="btn-check-health"
-          className="btn-action health"
-          onClick={() => executeRequest('health', '/api/health')}
-          disabled={loadingType !== null}
+          type="button"
+          className="btn-toggle-diagnostics"
+          onClick={() => setShowTester(!showTester)}
         >
-          <div className="btn-header">
-            <span className="btn-title">
-              {loadingType === 'health' && <span className="spinner" />}
-              Check Health
-            </span>
-            <span className="btn-badge">GET /api/health</span>
-          </div>
-          <p className="btn-description">
-            Tests server availability, CORS headers, and standard routing without database involvement.
-          </p>
+          <span>{showTester ? '▼ Hide System Diagnostics' : '▶ Show System Diagnostics & Health Check'}</span>
         </button>
 
-        <button
-          id="btn-check-db"
-          className="btn-action db"
-          onClick={() => executeRequest('db', '/api/test-db')}
-          disabled={loadingType !== null}
-        >
-          <div className="btn-header">
-            <span className="btn-title">
-              {loadingType === 'db' && <span className="spinner" />}
-              Check DB
-            </span>
-            <span className="btn-badge">GET /api/test-db</span>
-          </div>
-          <p className="btn-description">
-            Validates end-to-end MongoDB Atlas write &amp; read operations using the Ping model.
-          </p>
-        </button>
-      </div>
+        {showTester && (
+          <div className="diagnostics-drawer">
+            <div className="diag-meta-row">
+              <span className="diag-label">Target Backend API:</span>
+              <code className="diag-code">{apiUrl || 'http://localhost:5001'}</code>
+            </div>
 
-      {/* Response Display Section */}
-      <section className="response-container">
-        <div className="response-header">
-          <div className="response-title">
-            <span>Response Output</span>
-            {loadingType ? (
-              <span className="status-badge loading">
-                <span className="spinner" style={{ width: 10, height: 10, borderWidth: 1 }} />
-                Calling {activeEndpoint}...
-              </span>
-            ) : responseStatus !== null ? (
-              <span
-                className={`status-badge ${
-                  responseStatus >= 200 && responseStatus < 300 ? 'success' : 'error'
-                }`}
+            <div className="diag-actions">
+              <button
+                id="btn-check-health"
+                className="btn-diag health"
+                onClick={() => handleRunTest('health', '/api/health')}
+                disabled={testLoading !== null}
               >
-                {responseStatus === 0 ? 'Network Error' : `HTTP ${responseStatus}`}
-              </span>
-            ) : (
-              <span className="status-badge idle">Awaiting Request</span>
+                {testLoading === 'health' ? 'Checking...' : 'Check Health (GET /api/health)'}
+              </button>
+
+              <button
+                id="btn-check-db"
+                className="btn-diag db"
+                onClick={() => handleRunTest('db', '/api/test-db')}
+                disabled={testLoading !== null}
+              >
+                {testLoading === 'db' ? 'Checking...' : 'Check DB (GET /api/test-db)'}
+              </button>
+
+              <button
+                id="btn-check-seed-status"
+                className="btn-diag seed"
+                onClick={() => handleRunTest('seed', '/api/seed/status')}
+                disabled={testLoading !== null}
+              >
+                {testLoading === 'seed' ? 'Checking...' : 'Check Messages Count (GET /api/seed/status)'}
+              </button>
+            </div>
+
+            {testError && (
+              <div className="diag-error">
+                ⚠️ {testError}
+              </div>
+            )}
+
+            {testOutput && (
+              <pre className="diag-output">
+                {JSON.stringify(testOutput, null, 2)}
+              </pre>
             )}
           </div>
-
-          {responseTime !== null && (
-            <div className="response-meta">
-              <span>{responseTime} ms</span>
-              <span>{activeEndpoint}</span>
-            </div>
-          )}
-        </div>
-
-        {/* Error Details Banner */}
-        {errorMessage && (
-          <div className="error-banner" id="error-banner">
-            <div className="error-banner-title">
-              ⚠️ Request Error
-            </div>
-            <div className="error-banner-body">{errorMessage}</div>
-          </div>
         )}
-
-        {/* JSON Code Viewer */}
-        {responseData ? (
-          <pre className="code-viewer" id="response-viewer">
-            {JSON.stringify(responseData, null, 2)}
-          </pre>
-        ) : !loadingType && !errorMessage ? (
-          <div className="placeholder-text">
-            Click &ldquo;Check Health&rdquo; or &ldquo;Check DB&rdquo; above to test backend connectivity.
-          </div>
-        ) : null}
       </section>
 
       {/* Footer */}
       <footer className="footer-info">
-        ChatMind Deployment Validation Skeleton &bull; React + Express + MongoDB Atlas
+        ChatMind &bull; Built with React, Vite, Express &amp; MongoDB Atlas Vector Search
       </footer>
     </div>
   );

@@ -1,8 +1,11 @@
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const healthRoutes = require('./routes/health');
+const seedRoutes = require('./routes/seed');
+const searchRoutes = require('./routes/search');
 
 const app = express();
 const PORT = process.env.PORT || 5001;
@@ -14,6 +17,8 @@ app.use(express.json());
 
 // Routes
 app.use('/api', healthRoutes);
+app.use('/api', seedRoutes);
+app.use('/api', searchRoutes);
 
 // MongoDB Atlas Connection
 if (!MONGO_URI) {

@@ -22,6 +22,9 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+*.checkpoint.json
+.chat_checkpoint.json
+*embeddingsCache.json
 
 # Editor and OS files
 .DS_Store
@@ -32,3 +35,6 @@ lerna-debug.log*
 *.njsproj
 *.sln
 *.sw?
+
+# Local planning and context documents
+files/
